@@ -5,10 +5,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-p {
-  font-family: 'Open Sans', sans-serif;
-}
-
 html {
   font-size: 62.5%;
 }
@@ -17,7 +13,23 @@ body {
   max-width: 650px;
   margin: 20px auto;
   padding: 0 10px;
-  background-color: rgb(247, 252, 247);
+
+  --background-color: rgb(247, 252, 247);
+  --primary-text-color: #212121;
+  --secondary-text-color: #525151;
+
+  background-color: var(--background-color);
+}
+
+body.dark-theme {
+  --background-color: #121212;
+  --primary-text-color: white;
+  --secondary-text-color: #dad5d5;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--primary-text-color);
 }
 
 h1, h2, h3 {
@@ -26,18 +38,18 @@ h1, h2, h3 {
 }
 
 h1 {
-  color: #212121;
+  color: var(--primary-text-color);
   font-size: 4.0rem;
 }
 
 h2 {
   font-size: 2.8rem;
-  color: #525151;
+  color: var(--secondary-text-color);
 }
 
 h3 {
   font-size: 2.2rem;
-  color: #2b2b2b;
+  color: var(--primary-text-color);
   margin-bottom: 15px;
 }
 
@@ -53,21 +65,38 @@ p {
 }
 
 header {
+  position: relative;
   margin-bottom: 20px;
 }
 
 button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.90;
+}
+
+.theme-toggler {
+  position: absolute;
+  top: 10px;
+  right: 0;
+
+  background-color: transparent;
+  color: var(--primary-text-color);
+}
+
+.social-link button {
   display: block;
   margin-bottom: 15px;
   padding: 10px 0;
   width: 100%;
   font-size: 1.6rem;
-  cursor: pointer;
   color: white;
   font-weight: 500;
-  outline: none;
   transition: all 0.2s;
-  border: none;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
@@ -78,6 +107,11 @@ button:hover {
 
 .github {
   background-color: black;
+}
+
+body.dark-theme .github {
+  background-color: white;
+  color: black;
 }
 
 .linked-in {

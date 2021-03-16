@@ -35,10 +35,21 @@ function translateAllTextToEnglish() {
   document.title = 'Allan Juan - Software Developer';
 }
 
+function handleClick(selector, handler) {
+  const button = document.querySelector(selector);
+  button.addEventListener('click', handler);
+}
+
+function toggleTheme() {
+  document.body.classList.toggle('dark-theme');
+}
+
 function main() {
   if (!userLanguageIsPortuguese()) {
     translateAllTextToEnglish();
   }
+
+  handleClick('.theme-toggler', toggleTheme);
 }
 
 main();
