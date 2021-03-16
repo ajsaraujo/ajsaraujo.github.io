@@ -41,7 +41,11 @@ function handleClick(selector, handler) {
 }
 
 function toggleTheme() {
-  document.body.classList.toggle('dark-theme');
+  const isDarkTheme = document.body.classList.toggle('dark-theme');
+
+  const iconName = isDarkTheme ? 'light_mode' : 'dark_mode';
+  const iconElement = document.querySelector('.theme-toggler-icon');
+  iconElement.innerText = iconName;
 }
 
 function main() {

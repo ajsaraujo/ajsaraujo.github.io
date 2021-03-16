@@ -13,6 +13,7 @@ body {
   max-width: 650px;
   margin: 20px auto;
   padding: 0 10px;
+  transition: all 0.5s;
 
   --background-color: rgb(247, 252, 247);
   --primary-text-color: #212121;
@@ -75,17 +76,17 @@ button {
   border: none;
 }
 
-button:hover {
-  opacity: 0.90;
-}
-
 .theme-toggler {
   position: absolute;
   top: 10px;
   right: 0;
 
   background-color: transparent;
-  color: var(--primary-text-color);
+  color: var(--secondary-text-color);
+}
+
+.theme-toggler:hover {
+  opacity: 0.75;
 }
 
 .social-link button {
@@ -100,9 +101,9 @@ button:hover {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
-button:hover {
-  opacity: 0.90;
+.social-link button:hover {
   transform: scale(1.050);
+  opacity: 0.90;
 }
 
 .github {
