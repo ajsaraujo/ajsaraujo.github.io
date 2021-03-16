@@ -48,9 +48,17 @@ function toggleTheme() {
   iconElement.innerText = iconName;
 }
 
+function userPrefersDarkTheme() {
+  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+}
+
 function main() {
   if (!userLanguageIsPortuguese()) {
     translateAllTextToEnglish();
+  }
+
+  if (userPrefersDarkTheme()) {
+    toggleTheme();
   }
 
   handleClick('.theme-toggler', toggleTheme);
