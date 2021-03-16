@@ -2,5 +2,41 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+main {
+  max-width: 650px;
+  margin: 20px auto;
+}
+
+h1, h2 {
+  font-weight: 400;
+}
+
+h1 {
+  color: #212121;
+  font-size: 4.0rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+  color: #525151;
+}
+
+p {
+  font-size: 2.0rem;
+  line-height: 3.0rem;
+}
+
+header {
+  margin-bottom: 20px;
 }
