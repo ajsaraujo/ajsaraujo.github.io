@@ -17,6 +17,7 @@ body {
   max-width: 650px;
   margin: 20px auto;
   padding: 0 10px;
+  background-color: rgb(247, 252, 247);
 }
 
 h1, h2, h3 {
