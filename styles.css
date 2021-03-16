@@ -13,13 +13,14 @@ html {
   font-size: 62.5%;
 }
 
-main {
+body {
   max-width: 650px;
   margin: 20px auto;
 }
 
 h1, h2, h3 {
   font-weight: 400;
+  text-align: center;
 }
 
 h1 {
@@ -87,4 +88,16 @@ button:hover {
 
 .social-link {
   text-decoration: none;
+}
+
+.paragraph-container {
+  text-align: center;
+}
+
+.my-photo {
+  height: 150px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
